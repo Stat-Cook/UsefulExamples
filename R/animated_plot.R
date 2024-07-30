@@ -1,6 +1,8 @@
+#' Tag:animation
+#' Basic working example of using animation via gganimate
+
 {
   # Setup
-  library(gapminder)
   library(gganimate)
   library(tidyverse)
   
