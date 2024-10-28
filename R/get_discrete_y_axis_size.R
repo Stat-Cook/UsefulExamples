@@ -18,7 +18,7 @@ get_discrete_y_axis_size <- function(.plt){
   
   .bool <- .built$data |>
     map("y") |>
-    map(~"mapped_discrete" %in% class(.)) |>
+    map_lgl(~"mapped_discrete" %in% class(.)) |>
     simplify() |>
     all()
   
@@ -28,7 +28,7 @@ get_discrete_y_axis_size <- function(.plt){
   
   .built$data |>
     map("y") |>
-    map(max) |>
+    map_dbl(max) |>
     simplify() |>
     max()
   
