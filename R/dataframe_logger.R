@@ -10,7 +10,7 @@ log_data_frame <- function(df, name=NA){
 
 log_data_frame_pattern <- "Data frame (.*?) has (.*?) rows and (.*?) columns"
 
-log_as_df <- function(path, pattern=" \\[|\\] ", 
+logfile_as_df <- function(path, pattern=" \\[|\\] ", 
                       .colnames=c("Level", "Timestamp", "Message")){
   .log <- str_split(readLines(path), pattern) 
   .log <- as_tibble(reduce(.log, rbind))
